@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.worklah_yewzun">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkLah_YewZun">
         <activity
-            android:name=".DetailActivity"
+            android:name=".activity.ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

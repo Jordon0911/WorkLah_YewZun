@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1075604564124",
+    "project_id": "chat-2b91e",
+    "storage_bucket": "chat-2b91e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075604564124:android:ba86ced358de11a3f26559",
+        "android_client_info": {
+          "package_name": "com.example.worklah_yewzun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075604564124-5ctlu055feeu9l9on6q489ocu6qpnkpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiKlYmZ1SbUUJjsNJVzTe47DsBKUDnUAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075604564124-5ctlu055feeu9l9on6q489ocu6qpnkpm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

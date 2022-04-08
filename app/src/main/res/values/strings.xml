@@ -31,4 +31,44 @@
     <string name="job_location4">1st Floor, Bangunan IBEX, Jalan 222</string>
     <string name="job_time4">1 April, 8.00am - 8.00pm</string>
     <string name="job_overview4">1 Shift | RM10/hour</string>
+
+
+    <string name="job_description_text_1">Job Description</string>
+    <string name="requirement_text_1">Requirement</string>
+    <string name="requirement1">- Gender : Any \n- At least Diploma in IT or other relevant subject \n- Fresh Graduates are encouraged to apply \n- Basic coding skill and database skill \n- Interview Method : Phone Interview</string>
+    <string name="location_and_time_text_1">Location and Time</string>
+    <string name="poster_name_1">Jason Lee</string>
+
+    <string name="job_description_text_2">Job Description</string>
+    <string name="requirement_text_2">Requirement</string>
+    <string name="requirement2">- Gender : Any \n- At least Diploma in film studies or related field \n- Fresh Graduates are encouraged to apply \n- Ability to work to a tight schedule \n- Familiarity with 3D composition \n- Creative and artistic skills</string>
+    <string name="location_and_time_text_2">Location and Time</string>
+    <string name="poster_name_2">Martin Wong</string>
+
+    <string name="job_description_text_3">Job Description</string>
+    <string name="requirement_text_3">Requirement</string>
+    <string name="requirement3">- Gender : Male \n- Age : 18 and above \n- Proficient organizational skills \n- Excellent teamwork skills \n- Ability to read and understand delivery orders \n- Follow safe work practices and procedures</string>
+    <string name="location_and_time_text_3">Location and Time</string>
+    <string name="poster_name_3">Jennifer Ying</string>
+
+    <string name="job_description_text_4">Job Description</string>
+    <string name="requirement_text_4">Requirement</string>
+    <string name="requirement4">- Gender : Any \n- Age : 18 and above \n- Strong communication and interpersonal skills \n- Excellent teamwork skills \n- No experience required \n- Excellent multi-tasking abilities</string>
+    <string name="location_and_time_text_4">Location and Time</string>
+    <string name="poster_name_4">Peter Parker</string>
+    <string name="p_name">Jason Lee</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="claim">CLAIM</string>
+    <string name="people1">TODO</string>
+    <string name="back1">TODO</string>
+    <string name="chat">TODO</string>
+    <string name="call">TODO</string>
+    <string name="write_a_message">Write a message</string>
+    <string name="back2">TODO</string>
+    <string name="people2">TODO</string>
+    <string name="send">TODO</string>
+    <string name="this_is_a_message">This is a Message</string>
+    <string name="this_is_receive_message">This is receive message</string>
+
 </resources>

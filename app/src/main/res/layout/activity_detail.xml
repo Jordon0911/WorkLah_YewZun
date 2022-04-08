@@ -1,44 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background_color"
+    android:fillViewport="true"
     android:orientation="vertical"
-    tools:context=".DetailActivity"
-    android:background="@color/background_color">
+    tools:context=".activity.DetailActivity">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/secondary_color"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/back1" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            app:cardBackgroundColor="@color/secondary_color"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1.5dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/job_description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/sfuitext_bold"
+                android:text="@string/job_description_text_1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/job_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/sfuitext_bold"
+                android:text="@string/job_title1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/job_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="63dp"
+                android:fontFamily="@font/sfuitext_medium"
+                android:text="@string/job_description1"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="350dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="50dp"
+            app:cardBackgroundColor="@color/secondary_color"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1.5dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/job_requirement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/sfuitext_bold"
+                android:text="@string/requirement_text_1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/requirement_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/sfuitext_medium"
+                android:lineSpacingExtra="7dp"
+                android:text="@string/requirement1"
+                android:textColor="@color/black" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="350dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="430dp"
+            android:layout_marginEnd="50dp"
+            app:cardBackgroundColor="@color/secondary_color"
+            app:cardCornerRadius="15dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/job_location_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/sfuitext_bold"
+                android:text="@string/location_and_time_text_1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+
+                <ImageView
+                    android:id="@+id/location_image_info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="15dp"
+                    android:importantForAccessibility="no"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/job_location_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="40dp"
+                    android:fontFamily="@font/sfuitext_medium"
+                    android:text="@string/job_location1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+                <ImageView
+                    android:id="@+id/time_image_info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="65dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    android:id="@+id/job_time_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfuitext_medium"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/job_time1"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/job_description"
+
+            android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Job Description"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sfuitext_heavyitalic"
+            android:text="@string/job_price1"
             android:textColor="@color/black"
-            android:layout_marginStart="12dp"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/claim_button"
+            android:layout_width="380dp"
+            android:layout_height="55dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
             android:fontFamily="@font/sfuitext_bold"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/job_title1"
-            android:textColor="@color/black"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="35dp"
-            android:fontFamily="@font/sfuitext_bold"/>
+            android:text="@string/claim"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
 
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="413dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="21dp"
+            android:backgroundTint="@color/menu_bar_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="0.5dp"
+            app:layout_constraintTop_toBottomOf="@+id/claim_button">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_person"
+                android:contentDescription="@string/people1" />
+
+            <TextView
+                android:id="@+id/poster_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="77dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sfuitext_bold"
+                android:text="@string/poster_name_1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/icon_call1"
+                android:layout_width="38dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/menu_bar_color"
+                android:src="@drawable/ic_call"
+                android:contentDescription="@string/call" />
+
+            <ImageButton
+                android:id="@+id/icon_chat1"
+                android:layout_width="38dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="362dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/menu_bar_color"
+                android:contentDescription="@string/chat"
+                android:src="@drawable/ic_chat"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

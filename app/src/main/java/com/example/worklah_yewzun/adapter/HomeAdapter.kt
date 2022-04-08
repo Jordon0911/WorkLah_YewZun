@@ -1,18 +1,30 @@
-package com.example.worklah_yewzun
+package com.example.worklah_yewzun.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.worklah_yewzun.data.JobData
+import com.example.worklah_yewzun.R
 
 
-class Adapter(private val context: Context,
-              private val job: List<JobData>):RecyclerView.Adapter<Adapter.myViewHolder>(){
+class HomeAdapter(private val job: ArrayList<JobData>):RecyclerView.Adapter<HomeAdapter.myViewHolder>(){
 
-    class myViewHolder(private val view: View) :RecyclerView.ViewHolder(view){
+    private lateinit var mListener : onItemClickListener
+
+    interface onItemClickListener{
+
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+
+        mListener = listener
+    }
+
+    class myViewHolder(private val view: View, listener: onItemClickListener) :RecyclerView.ViewHolder(view){
 
         var jobTitle: TextView = view.findViewById(R.id.first_job)
         var jobPrice: TextView = view.findViewById(R.id.first_job_price)
@@ -22,21 +34,31 @@ class Adapter(private val context: Context,
         var jobOverview: TextView = view.findViewById(R.id.job_view)
         var jobImg: ImageView = view.findViewById(R.id.first_job_image)
 
+        init {
+
+            view.setOnClickListener {
+
+                listener.onItemClick(adapterPosition)
+            }
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
         val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.view,parent,false)
-        return myViewHolder(adapterLayout)
+        return myViewHolder(adapterLayout,mListener)
     }
 
     override fun onBindViewHolder(holder: myViewHolder, position: Int) {
+
         val item = job[position]
-        holder.jobTitle.text = context.resources.getString(item.jobTitle)
-        holder.jobPrice.text = context.resources.getString(item.jobPrice)
-        holder.jobDescription.text = context.resources.getString(item.jobDescription)
-        holder.jobLocation.text = context.resources.getString(item.jobLocation)
-        holder.jobTime.text = context.resources.getString(item.jobTime)
-        holder.jobOverview.text = context.resources.getString(item.jobOverview)
+
+        holder.jobTitle.text = item.jobTitle
+        holder.jobPrice.text = item.jobPrice
+        holder.jobDescription.text = item.jobDescription
+        holder.jobLocation.text = item.jobLocation
+        holder.jobTime.text = item.jobTime
+        holder.jobOverview.text = item.jobOverview
         holder.jobImg.setImageResource(item.jobImg)
 
     }
